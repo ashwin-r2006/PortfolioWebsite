@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashwin Rajesh – Portfolio</title>
+<meta name="description" content="Portfolio of Ashwin Rajesh, a second-year Computer Science student at IIIT Delhi and three-time Delhi State Chess Champion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site on-dark">
+  <div class="wrap bar">
+    <a class="brand" href="#top">AR</a>
+    <div class="head-tools">
+      <nav aria-label="Main">
+        <ul class="headertags">
+          <li><a href="#about" style="text-decoration: none;">About me</a></li>
+          <li><a href="#projects" style="text-decoration: none;">Projects</a></li>
+          <li><a href="#chess" style="text-decoration: none;">Chess</a></li>
+          <li><a href="#certifications" style="text-decoration: none;">Certifications</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-btn" id="theme-toggle">Dark theme</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="hero on-dark" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="kicker">Visually impaired second-year Computer Science student, IIIT Delhi</p>
+        <h1>Ashwin Rajesh</h1>
+        <p class="tagline">I build accessible software and play competitive chess. Three-time Delhi State Chess Champion.</p>
+        <p class="actions">
+          <a class="btn" href="#projects">See my projects</a>
+          <a class="btn ghost" href="#chess">My chess record</a>
+        </p>
+      </div>
+      <div class="herobanner">
+        <img src="./heroBanner.png" alt="A dark navy background with a reflective chessboard, prominent black-and-gold chess pieces, and a laptop displaying colorful programming code. A glowing blue coding symbol, geometric shapes, and orange orbital lines connect the themes of chess strategy and software development." height="450rem" width="450rem">
+      </div>
+    </div>
+  </div>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <h2 id="about-h">About me</h2>
+      <p class="lead">I’m Ashwin Rajesh, a visually impaired second-year B.Tech student in Computer Science and Engineering at IIIT Delhi, a FIDE-rated chess player and a three-time Delhi State Chess Champion for the Visually Impaired.</p>
+      <p>Chess taught me to plan several moves ahead and to stay calm when a position gets complicated. I bring the same approach to software: break the problem down, check every edge case, then build something dependable.</p>
+      <p>That is how my main project started. As a visually impaired player myself, I wanted blind and low-vision players to set up a Lichess position as easily as anyone else, so I built a screen-reader-friendly tool to do it. I work mainly with Python, Flask and JavaScript, and I’m comfortable in C, C++ and SQL.</p>
+      <p>I’m looking for internships in software development and AI.</p>
+      <dl class="facts">
+        <div><dt>FIDE rating</dt><dd>1614</dd></div>
+        <div><dt>Studying</dt><dd>B.Tech CSE Core, IIIT Delhi (2029)</dd></div>
+        <div><dt>Focus</dt><dd>Accessible software, full-stack development</dd></div>
+      </dl>
+      <p class="actions">
+        <a class="btn solid" href="Resume_Ashwin_Rajesh.docx" download>Download my resume<span class="sr-only"> (Word document)</span></a>
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="tinted" aria-labelledby="projects-h">
+    <div class="wrap">
+      <h2 id="projects-h">Projects</h2>
+
+      <article class="featured" aria-labelledby="acpb-h">
+        <h3 id="acpb-h">Accessible Chess Position Builder</h3>
+        <p>Blind and visually impaired players can’t easily set up a position on Lichess by dragging pieces. This full-stack web app lets them enter which piece is on which square through a screen-reader-friendly form, then builds the board and opens it in Lichess.</p>
+        <ul class="plain">
+          <li>Takes piece positions through a screen-reader-friendly form.</li>
+          <li>Validates them against chess rules and converts them into FEN notation plus a one-click Lichess analysis link.</li>
+          <li>Built on a Flask REST API with server-side validation for invalid squares, occupied squares, king adjacency and pawn placement. Clear error messages explain what is wrong and how to fix it.</li>
+          <li>Deployed with a separate frontend and backend, with CORS enabled.</li>
+        </ul>
+        <h4 class="sr-only">Technologies</h4>
+        <ul class="tags" aria-label="Technologies used">
+          <li>Python</li><li>Flask</li><li>JavaScript</li><li>REST API</li><li>Lichess</li>
+        </ul>
+        <a class="btn solid" href="https://github.com/ashwin-r2006/chess-analysis-code">View on GitHub<span class="sr-only">: Accessible Chess Position Builder (opens GitHub)</span></a>
+      </article>
+
+      <h3 class="subhead">More projects</h3>
+      <ul class="grid projects">
+        <li class="card">
+          <h4><a href="https://github.com/ashwin-r2006/rock-paper-scissor-game-in-python">Rock-Paper-Scissors CLI Game<span class="sr-only"> (opens GitHub)</span></a></h4>
+          <p class="lang">Python</p>
+          <p>Command-line game against a random computer opponent, with a score tally after every round.</p>
+        </li>
+        <li class="card">
+          <h4><a href="https://github.com/ashwin-r2006/Calculator-in-C">Command-Line Calculator<span class="sr-only"> (opens GitHub)</span></a></h4>
+          <p class="lang">C</p>
+          <p>Console calculator in C for addition, subtraction, multiplication and division.</p>
+        </li>
+        <li class="card">
+          <h4><a href="https://github.com/ashwin-r2006/guess-the-number-in-c">Number Guessing Game<span class="sr-only"> (opens GitHub)</span></a></h4>
+          <p class="lang">C</p>
+          <p>Console game in C: guess a number from 1 to 10 in five tries, with “near” or “far away” hints.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="chess" class="chess on-dark" aria-labelledby="chess-h">
+    <div class="wrap">
+      <h2 id="chess-h">Chess</h2>
+      <p class="lead">Three Delhi State titles, an international championship and a team podium.</p>
+      <ol class="timeline">
+        <li><span class="year">2023</span><span>Delhi State Chess Champion for the Visually Impaired.</span></li>
+        <li><span class="year">2023</span><span>Delhi team finished 3rd at the first Team Chess Championship for the Visually Impaired, held in Gujarat.</span></li>
+        <li><span class="year">2024</span><span>Delhi State Chess Champion for the Visually Impaired.</span></li>
+        <li><span class="year">2024</span><span>Played in the International Junior Chess Championship for the Visually Impaired, held in Bengaluru.</span></li>
+        <li><span class="year">2026</span><span>Delhi State Chess Champion for the Visually Impaired.</span></li>
+      </ol>
+      <h3 class="subhead">Play me online</h3>
+      <ul class="plain links">
+        <li><a href="https://lichess.org/@/AshwinR">Lichess profile: AshwinR<span class="sr-only"> (opens Lichess)</span></a></li>
+        <li><a href="https://www.chess.com/member/ashwinrajesh1">Chess.com profile: ashwinrajesh1<span class="sr-only"> (opens Chess.com)</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications" aria-labelledby="cert-h">
+    <div class="wrap">
+      <h2 id="cert-h">Certifications</h2>
+      <ul class="grid two">
+        <li class="card">
+          <h3><a href="https://coursera.org/share/87ef5d33abbb8fc24b96cad769acd245">Python Data Structures<span class="sr-only"> (opens Coursera)</span></a></h3>
+          <p class="lang">Coursera</p>
+        </li>
+        <li class="card">
+          <h3><a href="https://coursera.org/share/68daa5dfa75682d1ff8baaf9d4517ef8">Programming for Everybody (Getting Started with Python)<span class="sr-only"> (opens Coursera)</span></a></h3>
+          <p class="lang">Coursera</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="on-dark">
+  <div class="wrap">
+    <p>Find my code on <a href="https://github.com/ashwin-r2006">GitHub<span class="sr-only"> (opens GitHub profile)</span></a>.</p>
+    <p class="copy">&copy; <span id="year">2026</span> Ashwin Rajesh</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
